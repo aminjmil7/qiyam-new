@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import Yaneahlogo from "../assets/images/new-design/girls-happy.png";
 import Logodecoration from "../assets/images/new-design/Group 30544.png";
 import Childrenvolunteers from "../assets/images/new-design/Group-1.png";
+import bgImg from "../assets/images/new-design/backgroundmask.png"
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -31,7 +32,14 @@ CardContent.displayName = "CardContent";
 
 export const HomeSectionOne = (): JSX.Element => {
   return (
-    <Card className="relative w-full max-w-[1188px] h-auto border-none m-auto"  >
+    <Card className="relative w-full   h-auto border-none m-auto" 
+    style={{
+      backgroundImage: `url(${bgImg})`,
+      backgroundSize: "contain",
+      
+      backgroundRepeat: "no-repeat",
+    }}
+    >
       <CardContent className="p-0">
         <div className="flex flex-col md:flex-row items-center justify-between w-full">
           {/* Quote section */}

@@ -3,6 +3,7 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
+import bgImg from "../assets/images/new-design/Maskgroup.png"
 
 // Utils function
 function cn(...inputs: ClassValue[]) {
@@ -66,7 +67,15 @@ Button.displayName = "Button";
 // Header component
 export const Header = (): JSX.Element => {
   return (
-    <section className="flex flex-col max-w-screen-xl w-full items-center gap-8 px-8 py-0 mx-auto ">
+    <section
+    className="flex flex-col  w-full items-center gap-8 px-8 py-0 mx-auto"
+    style={{
+      backgroundImage: `url(${bgImg})`,
+      backgroundSize: "contain",
+      
+      backgroundRepeat: "no-repeat",
+    }}
+  >
       <div className="flex flex-col gap-12 self-stretch w-full items-center">
         <div className="flex flex-col max-w-screen-lg items-center gap-6 w-full">
           <div className="flex flex-col items-center gap-4 self-stretch w-full mt-[160px]">
